@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CIMC 2026 国赛离线资料库</title>
+  <style>
+    :root { --ink:#18202a; --muted:#5d6875; --line:#d8dee5; --paper:#f5f7f8; --panel:#fff; --red:#a32d2d; --green:#176c50; --blue:#1768a4; --gold:#8a6417; }
+    * { box-sizing:border-box; }
+    body { margin:0; color:var(--ink); background:var(--paper); font:15px/1.6 "Microsoft YaHei", "Segoe UI", sans-serif; letter-spacing:0; }
+    header { background:#17212b; color:#fff; border-bottom:4px solid #d44b3e; }
+    .head { max-width:1180px; margin:auto; padding:24px 22px 20px; display:grid; grid-template-columns:1fr auto; gap:20px; align-items:end; }
+    h1 { margin:0 0 4px; font-size:28px; letter-spacing:0; }
+    header p { margin:0; color:#d3dce5; }
+    .status { font-size:13px; color:#fff; border-left:3px solid #4db788; padding-left:12px; }
+    main { max-width:1180px; margin:auto; padding:22px; }
+    .alert { background:#fff4e2; border:1px solid #e4bc73; border-left:5px solid #c67b18; padding:12px 15px; margin-bottom:18px; }
+    .quick { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:10px; margin-bottom:22px; }
+    .quick a { background:var(--panel); border:1px solid var(--line); border-radius:6px; color:var(--ink); padding:13px; text-decoration:none; font-weight:700; min-height:72px; }
+    .quick a span { display:block; color:var(--muted); font-weight:400; font-size:12px; margin-top:3px; }
+    .quick a:hover { border-color:var(--blue); box-shadow:0 2px 8px #0001; }
+    .layout { display:grid; grid-template-columns:240px 1fr; gap:18px; }
+    nav { position:sticky; top:12px; align-self:start; background:var(--panel); border:1px solid var(--line); border-radius:6px; padding:12px; }
+    nav a { display:block; padding:7px 8px; color:#33404c; text-decoration:none; border-left:3px solid transparent; }
+    nav a:hover { background:#eef3f6; border-left-color:var(--blue); }
+    section { margin:0 0 22px; }
+    h2 { font-size:19px; margin:0 0 10px; border-bottom:2px solid var(--ink); padding-bottom:6px; letter-spacing:0; }
+    .grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px; }
+    .item { background:var(--panel); border:1px solid var(--line); border-radius:6px; padding:13px; }
+    .item h3 { margin:0 0 5px; font-size:15px; letter-spacing:0; }
+    .item p { margin:0 0 8px; color:var(--muted); font-size:13px; }
+    .item a { color:var(--blue); text-decoration:none; margin-right:10px; }
+    .tag { display:inline-block; padding:1px 6px; border-radius:3px; font-size:11px; font-weight:700; margin-right:5px; }
+    .a { background:#e7f3ec; color:var(--green); } .d { background:#fbe9e9; color:var(--red); } .c { background:#e8f1f8; color:var(--blue); }
+    .preview { display:grid; grid-template-columns:180px 1fr; gap:14px; align-items:start; }
+    .preview img { width:180px; border:1px solid var(--line); background:#fff; }
+    footer { color:var(--muted); border-top:1px solid var(--line); padding:18px 0 30px; font-size:12px; }
+    @media (max-width:850px) { .quick{grid-template-columns:repeat(2,1fr)} .layout{grid-template-columns:1fr} nav{position:static} .grid{grid-template-columns:1fr} .head{grid-template-columns:1fr} }
+    @media (max-width:520px) { main,.head{padding-left:14px;padding-right:14px} .quick{grid-template-columns:1fr} .preview{grid-template-columns:1fr} .preview img{width:100%;max-width:260px} h1{font-size:23px} }
+  </style>
+</head>
+<body>
+<header><div class="head"><div><h1>CIMC 2026 国赛离线资料库</h1><p>工业嵌入式系统开发 · 工程模板配套作战手册</p></div><div class="status">APP / Bootloader 构建基线<br>0 Error · 0 Warning</div></div></header>
+<main>
+  <div class="alert"><strong>现场正式赛题优先。</strong> 默认增益是占位值，必须实板标定；保持寄存器当前仅预留，写入不会改变调度周期。</div>
+  <div class="quick">
+    <a href="../%E4%B8%8A%E4%BD%8D%E6%9C%BA/CIMC_DebugTool.exe">启动调试上位机<span>Modbus、趋势曲线、CSV 回放、原始报文和升级</span></a>
+    <a href="00_导航/现场10分钟启动流程.md">现场 10 分钟<span>冻结基线、抄差异、最小修改</span></a>
+    <a href="02_工程手册/国赛从零到实战教学.md">从零到实战教学<span>22章教程、八节训练、现场闭环</span></a>
+    <a href="00_导航/需求代码验证矩阵.md">需求追踪矩阵<span>已实现、预留、待硬测一眼分清</span></a>
+    <a href="04_现场表单/提交前检查表.md">提交检查<span>工程、功能、PCB、材料</span></a>
+  </div>
+  <div class="layout">
+    <nav><a href="#source">权威原文</a><a href="#manual">工程手册</a><a href="#topic">专题速查</a><a href="#forms">现场表单</a><a href="#build">构建与工具</a></nav>
+    <div>
+      <section id="source"><h2>权威原文</h2><div class="preview"><a href="01_权威原文/赛题与指南/01_全国总决赛样题.pdf"><img src="01_权威原文/页面预览/全国总决赛样题_第2页.png" alt="全国总决赛样题第2页预览"></a><div class="grid">
+        <div class="item"><h3><span class="tag a">A 权威</span>全国总决赛样题</h3><p>三通道采样、±1%、隔离、端子、FreeModbus、GD 库。</p><a href="01_权威原文/赛题与指南/01_全国总决赛样题.pdf">打开 PDF</a></div>
+        <div class="item"><h3><span class="tag a">A 权威</span>初赛赛题</h3><p>Flash 分区、自定义协议、自动测评和 Bootloader。</p><a href="01_权威原文/赛题与指南/02_初赛赛题.pdf">打开 PDF</a></div>
+        <div class="item"><h3>参赛指南与竞赛手册</h3><p>赛场和参赛安排，以后续通知为准。</p><a href="01_权威原文/赛题与指南/03_全国总决赛参赛指南.pdf">参赛指南</a><a href="01_权威原文/赛题与指南/04_竞赛手册.pdf">竞赛手册</a></div>
+        <div class="item"><h3>Modbus 与原始库</h3><p>两份协议资料和大赛 FreeModbus 原包。</p><a href="01_权威原文/协议与库/01_MODBUS_BUSINESS_GUIDE.pdf">业务指南</a><a href="01_权威原文/协议与库/02_Modbus协议文档.pdf">协议文档</a></div>
+      </div></div></section>
+      <section id="manual"><h2>工程手册</h2><div class="grid">
+        <div class="item"><h3><span class="tag c">新手必读</span>从零到实战教学</h3><p>从首帧通信到标定、存储、排障、改题、答辩和八节训练。</p><a href="02_工程手册/国赛从零到实战教学.md">开始学习</a><a href="02_工程手册/国赛工程完整使用手册.md">工程手册</a></div>
+        <div class="item"><h3>编译烧录与恢复</h3><p>Keil 入口、完整烧录组合和现场回退。</p><a href="02_工程手册/编译烧录与恢复.md">打开</a></div>
+        <div class="item"><h3><span class="tag d">高风险</span>Flash 与 Bootloader</h3><p>解释工程中两套地址定义，明确当前有效路径。</p><a href="02_工程手册/Flash分区与Bootloader.md">打开</a></div>
+        <div class="item"><h3>状态与限制</h3><p>哪些已构建，哪些必须硬测，哪些只是预留。</p><a href="02_工程手册/已验证状态与已知限制.md">打开</a></div>
+      </div></section>
+      <section id="topic"><h2>专题速查</h2><div class="grid">
+        <div class="item"><h3>采样与标定</h3><a href="03_专题速查/GD30AD3344与三通道采样.md">ADC</a><a href="03_专题速查/4-20mA与0-10V标定.md">标定</a></div>
+        <div class="item"><h3>通信与调试工作台</h3><a href="03_专题速查/FreeModbus_RTU速查.md">Modbus</a><a href="03_专题速查/RS485与RTU时序.md">RS485</a><a href="03_专题速查/OmniProbe设计参考与比赛映射.md">OmniProbe 参考</a></div>
+        <div class="item"><h3>存储与兼容</h3><a href="03_专题速查/TF卡与FatFs速查.md">TF/FatFs</a><a href="03_专题速查/初赛协议兼容与切换.md">初赛协议</a></div>
+        <div class="item"><h3>硬件与排障</h3><a href="03_专题速查/PCB设计与验收检查.md">PCB</a><a href="03_专题速查/故障排查手册.md">故障排查</a></div>
+      </div></section>
+      <section id="forms"><h2>现场表单</h2><div class="grid">
+        <div class="item"><h3>改题与标定</h3><a href="04_现场表单/现场改题记录表.md">改题表</a><a href="04_现场表单/标定记录表.csv">标定 CSV</a></div>
+        <div class="item"><h3>验收与故障</h3><a href="04_现场表单/功能验收记录表.md">验收表</a><a href="04_现场表单/故障定位记录表.md">故障表</a></div>
+        <div class="item"><h3>提交与答辩</h3><a href="04_现场表单/提交前检查表.md">提交检查</a><a href="04_现场表单/答辩提纲.md">答辩提纲</a></div>
+      </div></section>
+      <section id="build"><h2>构建与工具</h2><div class="grid">
+        <div class="item"><h3><span class="tag c">可运行</span>比赛调试上位机</h3><p>Windows 单文件 EXE，支持三通道趋势、冻结、CSV 记录/回放、PNG 导出、寄存器、原始报文和初赛升级。</p><a href="../%E4%B8%8A%E4%BD%8D%E6%9C%BA/CIMC_DebugTool.exe">启动 EXE</a><a href="../%E4%B8%8A%E4%BD%8D%E6%9C%BA/README.md">使用手册</a></div>
+        <div class="item"><h3><span class="tag c">C 已构建</span>构建基线</h3><p>资源数据、SHA-256、原始构建日志。</p><a href="05_构建基线/构建基线与复核.md">打开</a></div>
+        <div class="item"><h3>离线搜索与检查</h3><p>PowerShell 搜索正文，检查核心资料和日志。</p><a href="06_离线工具/使用说明.md">打开</a></div>
+      </div></section>
+    </div>
+  </div>
+  <footer>整理日期：2026-08-13 · 本页面不请求任何网络资源 · 所有路径均为资料库内相对路径</footer>
+</main>
+</body></html>

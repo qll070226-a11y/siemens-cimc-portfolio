@@ -1,0 +1,46 @@
+# Build outputs and IDE caches
+**/output/
+**/Output/
+**/Objects/
+**/Listings/
+**/Debug/
+**/Release/
+**/*.o
+**/*.obj
+**/*.axf
+**/*.elf
+**/*.hex
+**/*.bin
+**/*.map
+**/*.crf
+**/*.d
+**/*.dep
+**/*.lst
+**/*.pdb
+**/*.ilk
+**/*.log
+**/*.db
+**/*.pack
+**/*.pidx
+**/*.vsidx
+
+# Large media, installers, archives, and generated databases
+**/*.mp4
+**/*.avi
+**/*.mov
+**/*.zip
+**/*.7z
+**/*.rar
+**/*.exe
+**/*.msi
+**/*.dll
+**/*.sqlite
+**/*.db
+
+# Local/editor files
+.vs/
+.vscode/
+*.user
+*.suo
+Thumbs.db
+Desktop.ini

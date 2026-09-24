@@ -1,0 +1,23 @@
+[project_search_path]: ./
+[map_search_path]: ./
+[project_file_path]: .//CIMC_APP.uvprojx
+[ map_file_path]: .//list/Project.map
+[parse_keil_map start]: 
+[Found keyword]: ----------Execution Region----------
+[name]:  ER_IROM1 
+[Exec base]: 0x8011000
+[Size]: 0xb210
+[Max]: 0x20000
+[Found keyword]: ----------Execution Region----------
+[name]:  RW_IRAM1 
+[Exec base]: 0x20000000
+[Size]: 0x2d90
+[Max]: 0x30000
+[parse_keil_map over printf bar]: 
+  RW_IRAM1 :0x20000000
+  192.00 KB :|¡ö___________________|    5.93 % (   11.39 KB /   192.00 KB) [184944 B]
+  ER_IROM1 :0x8011000
+  128.00 KB :|¡ö¡ö¡ö¡ö¡ö¡ö______________|   34.78 % (   44.52 KB /   128.00 KB) [85488 B]
+[export csv]: ./_sort_by_flash.csv
+[export csv]: ./_sort_by_ram.csv
+[export xlsx]: _analysis.xlsx
